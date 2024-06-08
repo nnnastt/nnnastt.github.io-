@@ -1,24 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import './index.css';
+import React from 'react';
+import Header from './Header';
+import Firstsection from './Firstsection';
+import Secondsection from './Secondsection';
+import Thirdsection from './Thirdsection';
+import Fourthsection from './Fourthsection';
+import Fifthsection from './Fifthsection';
+import Sixthsection from './Sixthsection';
+import Seventhsection from './Seventhsection';
+import Eighthsection from './Eighthsection';
+import Ninthsection from './Ninthsection';
+import Time from './Time';
+import Footer from './Footer';
+
+import { CartProvider } from './CartContext';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartProvider>
+      <div className="App">
+        <Header />
+        <Firstsection />
+        <Secondsection />
+        <Thirdsection />
+        <Fourthsection />
+        <Fifthsection />
+        <Sixthsection />
+        <Seventhsection />
+        <Time />
+        <Eighthsection />        
+        <Ninthsection />
+        <Footer />
+      </div>
+    </CartProvider>
   );
 }
 
