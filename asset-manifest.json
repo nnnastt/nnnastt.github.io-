@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2267793a.css",
+    "main.js": "/static/js/main.609f9596.js",
+    "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
+    "static/media/ring-box-1.png": "/static/media/ring-box-1.4817845ddd92ca681db3.png",
+    "static/media/a.webp": "/static/media/a.de47dea9bb9880fca91b.webp",
+    "static/media/d.webp": "/static/media/d.995b39bc675cdb6e689c.webp",
+    "static/media/s.webp": "/static/media/s.f5ee9a7f54615a4d98e8.webp",
+    "static/media/pic1.webp": "/static/media/pic1.543bf83827bbafdf9769.webp",
+    "static/media/w.webp": "/static/media/w.9e376f1756139c780b09.webp",
+    "static/media/q.webp": "/static/media/q.36b38e615b610d315971.webp",
+    "static/media/e.webp": "/static/media/e.a3053ec5b305f3e12197.webp",
+    "static/media/МГЛ.webp": "/static/media/МГЛ.0bb50633275dee75110a.webp",
+    "static/media/no.svg": "/static/media/no.6cfa71e3412eaf9a72a8894b487d2245.svg",
+    "static/media/n.svg": "/static/media/n.5d5187dbb03fa13a56795c076503da35.svg",
+    "static/media/noг.svg": "/static/media/noг.5faeb2e357be2889938a858304b9f130.svg",
+    "static/media/noun_.svg": "/static/media/noun_.18906d11dff11cc84b2aa222ee32e0b5.svg",
+    "static/media/noun.svg": "/static/media/noun.173eae6be744e5dec6aba5629afc986c.svg",
+    "static/media/gem3.svg": "/static/media/gem3.f3b10c6e16d444ea72f8b0c13c844950.svg",
+    "index.html": "/index.html",
+    "main.2267793a.css.map": "/static/css/main.2267793a.css.map",
+    "main.609f9596.js.map": "/static/js/main.609f9596.js.map",
+    "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2267793a.css",
+    "static/js/main.609f9596.js"
+  ]
+}
