@@ -1,111 +1,92 @@
-import React, { useState } from 'react';
-import { useCart } from './CartContext';
-import image1 from './pic/s1.webp';
-import image2 from './pic/s2.webp';
-import image3 from './pic/s3.webp';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import q from './pic/q.webp';
+import w from './pic/w.webp';
+import e from './pic/e.webp';
 
-const Card = ({ product, onCardClick, onAddToCart }) => {
+const Fifthsection = () => {
   return (
-    <div className="w-1/3 p-4" onClick={() => onCardClick(product)}>
-      <div className="bg-white rounded-lg shadow-md overflow-hidden">
-        <img src={product.image} alt={product.name} className="w-full h-50 object-cover" />
-        <div className="p-4">
-          <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
-          <p className="text-gray-700 mb-2">₽{product.price}</p>
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onAddToCart(product);
-            }}
-            style={{ backgroundColor: '#ff6047' }}
-            className="text-white px-4 py-2 rounded-md"
-          >
-            Добавить в корзину
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const Modal = ({ product, onClose, onAddToCart }) => {
-  return (
-    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-75 z-50">
-      <div className="bg-white w-full max-w-lg p-8 rounded-lg overflow-hidden relative">
-        <button onClick={onClose} className="absolute top-0 right-0 m-4 text-gray-600">&times;</button>
-        <div className="flex">
-          <img src={product.image} alt={product.name} className="w-1/2 h-auto object-cover" />
-          <div className="w-1/2 p-4">
-            <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
-            <p className="text-gray-700 mb-2">{product.ingredients}</p>
-            <p className="text-red-500 mb-2">₽{product.price}</p>
-            <button
-              onClick={() => onAddToCart(product)}
-              style={{ backgroundColor: '#ff6047' }}
-              className="text-white px-4 py-2 rounded-md"
-            >
-              Добавить в корзину
-            </button>
+    <div id='reaction' className="max-w-5xl mx-auto px-4 py-8 relative">
+      <Swiper
+        modules={[Navigation, Pagination]}
+        navigation={true} // Включаем стандартную навигацию Swiper
+        pagination={{
+          clickable: true,
+          renderBullet: (index, className) =>
+            `<span class="${className}" style="background-color: #9F2042;"></span>`,
+        }}
+        spaceBetween={30}
+        slidesPerView={1}
+        className="flex items-center justify-center"
+      >
+        {/* Первый слайд */}
+        <SwiperSlide>
+          <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto text-center">
+            <h3 className="text-xl font-semibold mb-4">Отзывы о наших работах</h3>
+            <img
+              src={e}
+              alt="e"
+              className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h4 className="text-lg font-medium">Ирина С.</h4>
+            <p className="text-sm text-gray-500 mb-4">
+              Как приятно было получить этот товар. Конверт с сертификатом и камнем упакован в пакет. Доставлен без повреждений, заломов.
+            </p>
           </div>
-        </div>
-      </div>
-    </div>
-  );
+        </SwiperSlide>
 
-};
+        {/* Второй слайд */}
+        <SwiperSlide>
+          <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto text-center">
+            <h3 className="text-xl font-semibold mb-4">Отзывы о наших работах</h3>
+            <img
+              src={q}
+              alt="q"
+              className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h4 className="text-lg font-medium">Морозова Е.А.</h4>
+            <p className="text-sm text-gray-500 mb-4">
+              Продавец всегда подробно рассказывает об особенностях каждого камня по телефону, высылает дополнительные фото и видео.
+            </p>
+          </div>
+        </SwiperSlide>
 
-const FifthSection = () => {
-  const [modalProduct, setModalProduct] = useState(null);
-  const { addToCart } = useCart();
+        {/* Третий слайд */}
+        <SwiperSlide>
+          <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto text-center">
+            <h3 className="text-xl font-semibold mb-4">Отзывы о наших работах</h3>
+            <img
+              src={w}
+              alt="w"
+              className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h4 className="text-lg font-medium">Дима</h4>
+            <p className="text-sm text-gray-500 mb-4">
+              Сайту доверяю, заказываю здесь на все праздники подарки жене и друзьям советую. Всегда что-то новенькое предлагают.
+            </p>
+          </div>
+        </SwiperSlide>
+      </Swiper>
 
-  const products = [
-    {
-      id: 4,
-      name: 'Унаги мини сет',
-      price: 1899,
-      image: image1,
-      ingredients: '40 шт.',
-    },
-    {
-      id: 5,
-      name: 'Калифорния сет',
-      price: 2299,
-      image: image2,
-      ingredients: '96 шт.',
-    },
-    {
-      id: 6,
-      name: 'Сяке сет',
-      price: 1199,
-      image: image3,
-      ingredients: '23 шт.',
-    },
-  ];
+      {/* Кастомные стили для стрелок */}
+      <style jsx>{`
+        .swiper-button-prev,
+        .swiper-button-next {
+          color: #9F2042; /* Цвет стрелок */
+        }
 
-  const handleCardClick = (product) => {
-    setModalProduct(product);
-  };
-
-  const handleCloseModal = () => {
-    setModalProduct(null);
-  };
-
-  return (
-    <div className="container mx-auto mt-8 px-4">
-      <div className="flex flex-wrap -mx-4">
-        {products.map((product) => (
-          <Card key={product.id} product={product} onCardClick={handleCardClick} onAddToCart={addToCart} />
-        ))}
-      </div>
-      {modalProduct && (
-        <Modal product={modalProduct} onClose={handleCloseModal} onAddToCart={addToCart} />
-      )}
-      <div style={{borderColor: '#ff6047', borderWidth: '2px', backgroundColor: 'transparent' }}
-        className="inline-block text- black text-xl px-4 py-1 rounded-md">
-        Перейти в каталог ⟶
-    </div>
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+          font-size: 20px; /* Размер стрелок */
+          font-weight: bold;
+        }
+      `}</style>
     </div>
   );
 };
 
-export default FifthSection;
+export default Fifthsection;

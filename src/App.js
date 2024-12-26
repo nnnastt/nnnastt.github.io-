@@ -8,10 +8,7 @@ import Thirdsection from './Thirdsection';
 import Fourthsection from './Fourthsection';
 import Fifthsection from './Fifthsection';
 import Sixthsection from './Sixthsection';
-import Seventhsection from './Seventhsection';
-import Eighthsection from './Eighthsection';
-import Ninthsection from './Ninthsection';
-import Time from './Time';
+
 import Footer from './Footer';
 
 import { CartProvider } from './CartContext';
@@ -28,10 +25,7 @@ function App() {
         <Fourthsection />
         <Fifthsection />
         <Sixthsection />
-        <Seventhsection />
-        <Time />
-        <Eighthsection />        
-        <Ninthsection />
+        
         <Footer />
       </div>
     </CartProvider>
